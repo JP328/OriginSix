@@ -38,7 +38,7 @@ const swiper = new Swiper('.swiper-container', {
     el: '.swiper-pagination'
   },
   mousewheel: true,
-  Keyboard: true,
+  keyboard: true,
   breakpoints: {
     767: {
       slidesPerView: 2,
@@ -66,7 +66,7 @@ scrollReveal.reveal(
   { interval: 100 }
 )
 
-// Button back to top => Botão de voltar para cima
+// Button back to top => Botão de voltar ao topo
 const backToTopButton = document.querySelector('.back-to-top')
 function backToTop() {
   if (window.scrollY >= 560) {

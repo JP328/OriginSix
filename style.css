@@ -51,7 +51,6 @@ body {
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
-  max-width: 100vw;
 }
 
 .title {
@@ -128,23 +127,29 @@ body {
   border-bottom: 1px solid #e4e4e4;
   margin-bottom: 2rem;
   display: flex;
+
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  background: linear-gradient(
-    180deg,
-    hsl(var(--hue), 100%, 80%),
-    white,
-    white,
-    hsla(var(--hue), 100%, 80%, 1)
-  );
-  width: 100vw;
+
+  background: var(--body-color);
+  transition: 0.4s;
+  width: 100%;
 }
 
 #header.scroll {
   border-bottom: none;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  background: var(--base-color);
+}
+
+#header.scroll .container span {
+  color: var(--body-color);
+}
+
+#header.scroll nav .icon-menu {
+  color: var(--body-color);
 }
 
 /*-------------------------Logo----------------------------*/
@@ -375,6 +380,8 @@ nav.show div.icon-close {
 #testimonials .container {
   margin-left: 0;
   margin-right: 0;
+  position: relative;
+  overflow: hidden;
 }
 
 #testimonials header {
@@ -426,8 +433,8 @@ nav.show div.icon-close {
 }
 
 .swiper-pagination-bullet {
-  width: 0.75rem;
-  height: 0.75rem;
+  width: 0.85rem;
+  height: 0.85rem;
 }
 
 .swiper-pagination-bullet-active {
@@ -559,6 +566,14 @@ footer .social a:hover {
     margin-right: auto;
   }
 
+  #header.scroll nav ul li a:hover,
+  #header.scroll nav ul li a.active {
+    color: var(--body-color);
+  }
+
+  #header.scroll nav ul li a::after {
+    background: var(--body-color);
+  }
   .section {
     padding: 10rem 0;
   }
