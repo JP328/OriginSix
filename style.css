@@ -51,6 +51,7 @@ body {
   color: var(--text-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
+  max-width: 100vw;
 }
 
 .title {
@@ -138,7 +139,7 @@ body {
     white,
     hsla(var(--hue), 100%, 80%, 1)
   );
-  width: 100%;
+  width: 100vw;
 }
 
 #header.scroll {
